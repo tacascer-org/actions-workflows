@@ -8,7 +8,7 @@ jobs:
   submit_dependencies:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/setup_gradle.yml
+      - uses: tacascer-org/actions-workflows/.github/workflows/setup_gradle.yml@v0.1.0
         with:
           java-version: 17
       - uses: gradle/actions/dependency-submission@v3
