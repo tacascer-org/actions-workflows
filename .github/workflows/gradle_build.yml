@@ -18,11 +18,14 @@ jobs:
   build_project:
     runs-on: ${{ inputs.runs-on }}
     steps:
-      - uses: tacascer-org/actions-workflows/.github/workflows/setup_gradle.yml@v0.1.0
+      - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
           java-version: ${{ inputs.java-version }}
-          runs-on: ${{ inputs.runs-on }}
-          shallow-clone: false
+      - uses: gradle/actions/setup-gradle@v3
       - name: Run Gradle build
         run: ./gradlew build
       - name: Cache SonarCloud packages

@@ -8,8 +8,10 @@ jobs:
   submit_dependencies:
     runs-on: ubuntu-latest
     steps:
-      - uses: tacascer-org/actions-workflows/.github/workflows/setup_gradle.yml@v0.1.0
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
+          distribution: temurin
           java-version: 17
       - uses: gradle/actions/dependency-submission@v3
         with:
