@@ -1,0 +1,10 @@
+on: pull_request
+
+jobs:
+  approve-dependabot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./github/workflows/self_approve_dependabot.yml
+    permissions:
+      pull-requests: write
+      contents: write
