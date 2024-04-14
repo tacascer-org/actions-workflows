@@ -1,0 +1,18 @@
+on:
+  workflow_call:
+
+permissions:
+  contents: write
+
+jobs:
+  submit_dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/setup_gradle.yml
+        with:
+          java-version: 17
+      - uses: gradle/actions/dependency-submission@v3
+        with:
+          build-scan-publish: true
+          build-scan-terms-of-use-url: "https://gradle.com/help/legal-terms-of-use"
+          build-scan-terms-of-use-agree: "yes"
