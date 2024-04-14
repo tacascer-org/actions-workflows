@@ -18,9 +18,10 @@ jobs:
   build_project:
     runs-on: ${{ inputs.runs-on }}
     steps:
-      - uses: ./.github/workflows/setup_gradle.yml
+      - uses: tacascer-org/actions-workflows/.github/workflows/setup_gradle.yml@v0.1.0
         with:
           java-version: ${{ inputs.java-version }}
+          runs-on: ${{ inputs.runs-on }}
           shallow-clone: false
       - name: Run Gradle build
         run: ./gradlew build
