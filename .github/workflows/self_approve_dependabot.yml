@@ -1,11 +1,14 @@
 on: pull_request
 
 jobs:
-  approve-dependabot:
+  checkout:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/workflows/approve_dependabot.yml
+
+  approve-dependabot:
+    needs: checkout
+    uses: ./.github/workflows/approve_dependabot.yml
     permissions:
       pull-requests: write
       contents: write
