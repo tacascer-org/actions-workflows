@@ -15,14 +15,16 @@ on:
         description: "The SonarCloud token to use for running Sonar analysis"
 
 jobs:
+  setup_gradle:
+    uses: tacascer-org/actions-workflows/.github/workflows/setup_gradle.yml@v0.1.0
+    with:
+      java-version: ${{ inputs.java-version }}
+      runs-on: ${{ inputs.runs-on }}
+      shallow-clone: false
   build_project:
+    needs: setup_gradle
     runs-on: ${{ inputs.runs-on }}
     steps:
-      - uses: tacascer-org/actions-workflows/.github/workflows/setup_gradle.yml@v0.1.0
-        with:
-          java-version: ${{ inputs.java-version }}
-          runs-on: ${{ inputs.runs-on }}
-          shallow-clone: false
       - name: Run Gradle build
         run: ./gradlew build
       - name: Cache SonarCloud packages
