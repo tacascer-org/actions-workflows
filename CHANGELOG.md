@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/tacascer-org/actions-workflows/compare/v0.1.1...v0.2.0) (2024-04-15)
+
+
+### Features
+
+* add wrapper validation action ([#9](https://github.com/tacascer-org/actions-workflows/issues/9)) ([8a97857](https://github.com/tacascer-org/actions-workflows/commit/8a9785749a4cbef014550285cd70c496aae596a9))
+
 ## [0.1.1](https://github.com/tacascer-org/actions-workflows/compare/v0.1.0...v0.1.1) (2024-04-14)
 
 
