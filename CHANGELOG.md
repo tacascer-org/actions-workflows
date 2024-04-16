@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/tacascer-org/actions-workflows/compare/v0.2.0...v0.2.1) (2024-04-16)
+
+
+### Bug Fixes
+
+* don't fail job when review_dependencies.yml ([#11](https://github.com/tacascer-org/actions-workflows/issues/11)) ([f786c0a](https://github.com/tacascer-org/actions-workflows/commit/f786c0aab043e08329ee9707422b62fc2289dd34))
+
 ## [0.2.0](https://github.com/tacascer-org/actions-workflows/compare/v0.1.1...v0.2.0) (2024-04-15)
 
 
