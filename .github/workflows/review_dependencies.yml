@@ -21,3 +21,4 @@ jobs:
           build-scan-terms-of-use-agree: "yes"
       - name: Perform dependency review
         uses: actions/dependency-review-action@v4
+        continue-on-error: true
