@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/tacascer-org/actions-workflows/compare/v0.2.1...v0.2.2) (2024-04-17)
+
+
+### Bug Fixes
+
+* retry on snapshot failure for review_dependencies.yml ([#13](https://github.com/tacascer-org/actions-workflows/issues/13)) ([3915ecd](https://github.com/tacascer-org/actions-workflows/commit/3915ecdc9362d3429de4ec69cb0ff764818f6ec9))
+
 ## [0.2.1](https://github.com/tacascer-org/actions-workflows/compare/v0.2.0...v0.2.1) (2024-04-16)
 
 
