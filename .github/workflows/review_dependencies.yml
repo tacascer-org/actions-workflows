@@ -22,3 +22,6 @@ jobs:
       - name: Perform dependency review
         uses: actions/dependency-review-action@v4
         continue-on-error: true
+        with:
+          retry-on-snapshot-warnings: true
+          retry-on-snapshot-warnings-timeout: 600
