@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/tacascer-org/actions-workflows/compare/v0.2.2...v0.2.3) (2024-04-26)
+
+
+### Bug Fixes
+
+* reduce timeout for retry ([#15](https://github.com/tacascer-org/actions-workflows/issues/15)) ([39dc907](https://github.com/tacascer-org/actions-workflows/commit/39dc90719799376e214113f867c8bf89749e2398))
+
 ## [0.2.2](https://github.com/tacascer-org/actions-workflows/compare/v0.2.1...v0.2.2) (2024-04-17)
 
 
