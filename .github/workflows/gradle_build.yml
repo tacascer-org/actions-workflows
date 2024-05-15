@@ -23,6 +23,11 @@ jobs:
           fetch-depth: 0
       - name: Validate Gradle Wrapper
         uses: gradle/actions/wrapper-validation@v3
+      - name: Setup CodeQL analysis
+        uses: github/codeql-action/init@v3
+        with:
+          languages: java-kotlin
+          build-mode: manual
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -40,11 +45,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./gradlew sonar
-      - name: Setup CodeQL analysis
-        uses: github/codeql-action/init@v3
-        with:
-          languages: java-kotlin
-          build-mode: manual
       - name: Run CodeQL analysis
         uses: github/codeql-action/analyze@v3
         with:
