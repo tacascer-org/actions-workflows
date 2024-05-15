@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/tacascer-org/actions-workflows/compare/v0.3.1...v0.3.2) (2024-05-15)
+
+
+### Bug Fixes
+
+* **Gradle Build:** fix permissions for CodeQL ([#21](https://github.com/tacascer-org/actions-workflows/issues/21)) ([e076779](https://github.com/tacascer-org/actions-workflows/commit/e0767794d4d09faaf937bb24c0762d168e711b97))
+
 ## [0.3.1](https://github.com/tacascer-org/actions-workflows/compare/v0.3.0...v0.3.1) (2024-05-15)
 
 
