@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/tacascer-org/actions-workflows/compare/v0.4.3...v0.4.4) (2024-05-19)
+
+
+### Bug Fixes
+
+* **Gradle Build:** try using autobuild  ([#33](https://github.com/tacascer-org/actions-workflows/issues/33)) ([7d34654](https://github.com/tacascer-org/actions-workflows/commit/7d34654f191824874c7c63e734afe93129a256e6))
+
 ## [0.4.3](https://github.com/tacascer-org/actions-workflows/compare/v0.4.2...v0.4.3) (2024-05-19)
 
 
