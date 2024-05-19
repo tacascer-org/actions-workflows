@@ -1,5 +1,10 @@
 on:
   workflow_call:
+    inputs:
+      java-version:
+        required: false
+        type: number
+        default: 21
 
 permissions:
   contents: write
@@ -12,7 +17,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: ${{ inputs.java-version }}
       - name: Generate and submit dependency graph
         uses: gradle/actions/dependency-submission@v3
         with:
