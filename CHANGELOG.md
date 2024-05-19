@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/tacascer-org/actions-workflows/compare/v0.3.2...v0.4.0) (2024-05-19)
+
+
+### Features
+
+* **Gradle Build:** include more jobs and run them parallel ([#23](https://github.com/tacascer-org/actions-workflows/issues/23)) ([abfe27b](https://github.com/tacascer-org/actions-workflows/commit/abfe27b136ed3a89ed737871261e18b8a0d74b26))
+
 ## [0.3.2](https://github.com/tacascer-org/actions-workflows/compare/v0.3.1...v0.3.2) (2024-05-15)
 
 
