@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/tacascer-org/actions-workflows/compare/v0.4.0...v0.4.1) (2024-05-19)
+
+
+### Bug Fixes
+
+* **Gradle Build:** pass correct permissions to review_dependencies ([#27](https://github.com/tacascer-org/actions-workflows/issues/27)) ([357d15c](https://github.com/tacascer-org/actions-workflows/commit/357d15c289330fdb2bef2a71a17580c7793a62ff))
+
 ## [0.4.0](https://github.com/tacascer-org/actions-workflows/compare/v0.3.2...v0.4.0) (2024-05-19)
 
 
