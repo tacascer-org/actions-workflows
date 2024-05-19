@@ -74,3 +74,5 @@ jobs:
 
   review-dependencies:
     uses: tacascer-org/actions-workflows/.github/workflows/review_dependencies.yml@v0
+    permissions:
+      contents: write
