@@ -18,26 +18,19 @@ permissions:
   security-events: write # For CodeQL
 
 jobs:
-  build_project:
+  build-project:
     runs-on: ${{ inputs.runs-on }}
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-      - name: Validate Gradle Wrapper
-        uses: gradle/actions/wrapper-validation@v3
-      - name: Setup CodeQL analysis
-        uses: github/codeql-action/init@v3
-        with:
-          languages: java-kotlin
-          build-mode: manual
+          fetch-depth: 0 # Shallow clones should be disabled for SonarCloud
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: ${{ inputs.java-version }}
       - uses: gradle/actions/setup-gradle@v3
-      - name: Run Gradle build
-        run: ./gradlew build
+      - name: Run tests
+        run: ./gradlew check
       - name: Cache SonarCloud packages
         uses: actions/cache@v4
         with:
@@ -48,7 +41,36 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./gradlew sonar
+
+  verify-gradle-wrapper:
+    runs-on: ${{ inputs.runs-on }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Gradle Wrapper
+        uses: gradle/actions/wrapper-validation@v3
+
+  run-codeql-analysis:
+    runs-on: ${{ inputs.runs-on }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup CodeQL analysis
+        uses: github/codeql-action/init@v3
+        with:
+          languages: java-kotlin
+          build-mode: manual
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ inputs.java-version }}
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Run tests
+        run: ./gradlew check
       - name: Run CodeQL analysis
         uses: github/codeql-action/analyze@v3
         with:
           category: '/language:java-kotlin'
+    permissions:
+      security-events: write
+
+  review-dependencies:
+    uses: tacascer-org/actions-workflows/.github/workflows/review_dependencies.yml@v0
