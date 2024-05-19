@@ -63,7 +63,7 @@ jobs:
           distribution: temurin
           java-version: ${{ inputs.java-version }}
       - uses: gradle/actions/setup-gradle@v3
-      - name: Run tests
+      - name: Run build
         run: ./gradlew build
       - name: Run CodeQL analysis
         uses: github/codeql-action/analyze@v3
