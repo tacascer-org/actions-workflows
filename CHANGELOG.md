@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.5](https://github.com/tacascer-org/actions-workflows/compare/v0.4.4...v0.4.5) (2024-05-21)
+
+
+### Bug Fixes
+
+* **Gradle Build:** run CodeQL Analyze action ([#35](https://github.com/tacascer-org/actions-workflows/issues/35)) ([662a405](https://github.com/tacascer-org/actions-workflows/commit/662a4059809ad8d531751e840a762fdd6d4a6a61))
+
 ## [0.4.4](https://github.com/tacascer-org/actions-workflows/compare/v0.4.3...v0.4.4) (2024-05-19)
 
 
