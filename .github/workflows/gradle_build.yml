@@ -62,8 +62,10 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: java-kotlin
-      - name: Autobuild CodeQL database
+      - name: Autobuild
         uses: github/codeql-action/autobuild@v3
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v3
     permissions:
       security-events: write
 
