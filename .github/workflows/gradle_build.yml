@@ -14,6 +14,8 @@ on:
         required: true
         description: "The SonarCloud token to use for running Sonar analysis"
 
+permissions: read-all
+
 jobs:
   build-project:
     runs-on: ${{ inputs.runs-on }}
