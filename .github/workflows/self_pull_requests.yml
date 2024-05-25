@@ -1,0 +1,39 @@
+on: pull_request
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+  approve-dependabot:
+    uses: ./.github/workflows/approve_dependabot.yml
+    permissions:
+      pull-requests: write
+      contents: write
+
+  review-dependencies:
+    needs: checkout
+    steps:
+      - name: Perform dependency review
+        uses: actions/dependency-review-action@v4
+        continue-on-error: true
+        with:
+          retry-on-snapshot-warnings: true
+    permissions:
+      contents: write
+
+  lint:
+    needs: checkout
+    permissions:
+      contents: read
+      packages: read
+      # To report GitHub Actions status checks
+      statuses: write
+    steps:
+      - uses: super-linter/super-linter@v6.5.1
+        env:
+          # To report GitHub Actions status checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FILTER_REGEX_EXCLUDE: .*CHANGELOG.md # Ignore generated files
+          VALIDATE_JSCPD: false # Disable JSCPD validation
