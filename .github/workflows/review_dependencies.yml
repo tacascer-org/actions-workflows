@@ -6,8 +6,7 @@ on:
         type: number
         default: 21
 
-permissions:
-  contents: write
+permissions: none
 
 jobs:
   dependency-review:
@@ -29,3 +28,5 @@ jobs:
         continue-on-error: true
         with:
           retry-on-snapshot-warnings: true
+    permissions:
+      contents: write
