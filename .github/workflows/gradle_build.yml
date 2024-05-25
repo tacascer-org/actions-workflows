@@ -14,9 +14,6 @@ on:
         required: true
         description: "The SonarCloud token to use for running Sonar analysis"
 
-permissions:
-  security-events: write # For CodeQL
-
 jobs:
   build-project:
     runs-on: ${{ inputs.runs-on }}
