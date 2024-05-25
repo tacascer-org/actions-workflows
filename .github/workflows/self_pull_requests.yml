@@ -19,6 +19,7 @@ jobs:
       contents: write
 
   lint:
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: read
