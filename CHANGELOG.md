@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/tacascer-org/actions-workflows/compare/v0.4.5...v0.5.0) (2024-05-25)
+
+
+### Features
+
+* **gradle build:** set up linting ([#37](https://github.com/tacascer-org/actions-workflows/issues/37)) ([ea9b28a](https://github.com/tacascer-org/actions-workflows/commit/ea9b28ab7261c02043a3eb8be13fc85ce801ce79))
+
 ## [0.4.5](https://github.com/tacascer-org/actions-workflows/compare/v0.4.4...v0.4.5) (2024-05-21)
 
 
