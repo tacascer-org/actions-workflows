@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.2](https://github.com/tacascer-org/actions-workflows/compare/v0.5.1...v0.5.2) (2024-05-25)
+
+
+### Bug Fixes
+
+* **permissions:** set default permissions to none ([#42](https://github.com/tacascer-org/actions-workflows/issues/42)) ([59930ef](https://github.com/tacascer-org/actions-workflows/commit/59930efcc4d4cde3fdc8d6fddfa50e27aa565dc1))
+
 ## [0.5.1](https://github.com/tacascer-org/actions-workflows/compare/v0.5.0...v0.5.1) (2024-05-25)
 
 
