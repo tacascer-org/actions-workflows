@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/tacascer-org/actions-workflows/compare/v0.5.0...v0.5.1) (2024-05-25)
+
+
+### Bug Fixes
+
+* **gradle build:** limit permissions for workflow ([#40](https://github.com/tacascer-org/actions-workflows/issues/40)) ([e29c97b](https://github.com/tacascer-org/actions-workflows/commit/e29c97b7d8601d031db034956536824b7c1d49aa))
+
 ## [0.5.0](https://github.com/tacascer-org/actions-workflows/compare/v0.4.5...v0.5.0) (2024-05-25)
 
 
