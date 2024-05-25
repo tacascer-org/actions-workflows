@@ -1,7 +1,7 @@
 on:
   workflow_call:
 
-permissions: none
+permissions: {}
 
 jobs:
   submit_dependencies:

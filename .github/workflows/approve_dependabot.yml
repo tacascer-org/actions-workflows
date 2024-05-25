@@ -3,7 +3,7 @@ name: Dependabot auto-approve
 on:
   workflow_call:
 
-permissions: none
+permissions: {}
 
 jobs:
   dependabot:

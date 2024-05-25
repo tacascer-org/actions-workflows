@@ -6,7 +6,7 @@ on:
         type: number
         default: 21
 
-permissions: none
+permissions: {}
 
 jobs:
   dependency-review:
