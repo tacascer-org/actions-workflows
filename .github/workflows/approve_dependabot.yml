@@ -3,9 +3,7 @@ name: Dependabot auto-approve
 on:
   workflow_call:
 
-permissions:
-  pull-requests: write
-  contents: write
+permissions: {}
 
 jobs:
   dependabot:
@@ -27,3 +25,7 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    permissions:
+      pull-requests: write
+      contents: write
+

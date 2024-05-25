@@ -14,10 +14,7 @@ on:
         required: true
         description: "The SonarCloud token to use for running Sonar analysis"
 
-permissions:
-  contents: write
-  security-events: write
-  statuses: write
+permissions: {}
 
 jobs:
   build-project:
