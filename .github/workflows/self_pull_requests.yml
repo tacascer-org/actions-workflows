@@ -1,11 +1,6 @@
 on: pull_request
 
 jobs:
-  checkout:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
   approve-dependabot:
     uses: ./.github/workflows/approve_dependabot.yml
     permissions:
@@ -13,7 +8,7 @@ jobs:
       contents: write
 
   review-dependencies:
-    needs: checkout
+    runs-on: ubuntu-latest
     steps:
       - name: Perform dependency review
         uses: actions/dependency-review-action@v4
@@ -24,7 +19,6 @@ jobs:
       contents: write
 
   lint:
-    needs: checkout
     permissions:
       contents: read
       packages: read
